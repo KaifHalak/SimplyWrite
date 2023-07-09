@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    width: 330px;
+    height: 500px;
+}
+
+
+.main-flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Top UI */
+
+.top-ui{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    flex-shrink: 0;
+    padding: 10px;
+    border-bottom: lightgrey 1px solid;
+}
+
+
+.add-new-note{
+    margin:0px 10px;
+}
+
+.add-new-note:hover{
+    cursor:pointer;
+    color: #ffa500
+}
+
+.delete-all{
+    cursor:pointer;
+    margin:0px 10px;
+}
+
+.delete-all:hover{
+    color: red
+}
+
+
+/* Note List */
+
+.note-list{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+
+.note{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: lightgrey 1px solid;
+    flex-shrink: 0;
+}
+
+.last-note{
+    border-bottom: lightgrey 1px solid;
+}
+
+.note:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.title{
+    text-align: center;
+    flex-grow: 1;
+    padding: 10px;
+    overflow:auto;
+    max-width: 250px;
+    max-height: 55px;
+}
+
+
+.title p{
+    padding: 3px;
+    margin:0px;
+}
+
+.extras{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.delete{
+    align-self: flex-end;
+}
+
+.icon{
+    width: 22px;
+    height: 22px;
+    margin:10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon:hover{
+    width: 23px;
+    height: 23px;
+}
+
+.text{
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 500;
+    font-size: 17px;
+}
+.top-text{
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    font-size:17px;
+}
+
+.top-text:hover{
+    font-size:17.2px ;
+}
+
+.custom-font{
+    font-family: 'Poppins', sans-serif;
+}
