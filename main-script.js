@@ -2,6 +2,7 @@
 
 let add_new_note_icon = document.querySelector(".add-new-note")
 let delete_all_notes_icon = document.querySelector(".delete-all")
+let credits_page_icon = document.querySelector(".credits-container")
 
 const EDIT_TITLE_ICON = "Icons/pen_svg.svg"
 const EDIT_TITLE_ICON_HOVER = "Icons/pen_orange_svg.svg"
@@ -19,6 +20,7 @@ const STORED_DATA_FORMAT = {
 }
 
 const NOTE_TAKING_HTML_LINK = `Note/note.html`
+const CREDITS_PAGE_HTML_LINK = "CreditsPage/credits.html"
 
 const CONFIRM_MESSAGE_FOR_DELETE_ALL = "Are you sure you want to delete all?"
 const CONFIRM_MESSAGE_FOR_SINGLE_DELETE = "Are you sure you want to delete it?"
@@ -129,8 +131,11 @@ function RetrieveDataFromChrome(){
         if (Object.keys(stored_data).length > 0){
             StoredData.SetData(stored_data)
             let current_active_index = StoredData.GetCurrentActiveIndex()
-            if (current_active_index !== -1){
+            // -1 - Main Menu, -2 - Credits Page, Rest : Notes
+            if (current_active_index !== -1 && current_active_index !== -2){
                 window.location.href = NOTE_TAKING_HTML_LINK
+            } else if (current_active_index === -2){
+                window.location.href = CREDITS_PAGE_HTML_LINK
             }
             DisplayLoadedData()
         }
@@ -155,6 +160,11 @@ function InitValues(){
         }
 
     })
+    credits_page_icon.addEventListener("click",function(){
+        StoredData.SetCurrentActiveID(new_index = -2)
+        StoreDataToChrome()
+        window.location.href = CREDITS_PAGE_HTML_LINK
+    })
 }
 
 function DisplayLoadedData(){
@@ -175,7 +185,7 @@ function AddNewNote(title_id, title){
 
     newDiv.innerHTML = `  
     <div class="title">
-        <p contenteditable="false" spellcheck="false" class="text">${title}</p>
+        <p contenteditable="false" spellcheck="false" class="text prevent-select">${title}</p>
     </div>
 
     <div class="extras">

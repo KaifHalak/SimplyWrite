@@ -1,9 +1,9 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "SimplyWrite",
     "version": "1.0",
     "description": "Take Quick and Minimalistic Notes",
-    "browser_action": {
+    "action": {
       "default_icon": {
         "16": "DisplayIcons/16.png",  
         "48": "DisplayIcons/48.png",  

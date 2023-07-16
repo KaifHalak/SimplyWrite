@@ -45,6 +45,21 @@ body{
     color: red
 }
 
+.credits-container{
+    border-top: 1px solid lightgrey;
+    text-align: center;
+}
+
+.credits-text{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.credits-container:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
 
 /* Note List */
 
@@ -131,3 +146,10 @@ body{
 .custom-font{
     font-family: 'Poppins', sans-serif;
 }
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+  }
