@@ -127,6 +127,8 @@ let LoadedNoteTitles = {
 RetrieveDataFromChrome()
 
 function RetrieveDataFromChrome(){
+    // If the extension is installed for the first time, then initialize, else load in the notes
+
     chrome.storage.local.get(null,function(stored_data){
         if (Object.keys(stored_data).length > 0){
             StoredData.SetData(stored_data)
