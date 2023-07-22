@@ -14,6 +14,11 @@ A Simple, Minimalistic Note Taking Extension to fulfill your note-taking needs
 - Makes use of Chrome Manifest Version 3 
 
 
+## Screenshots
+![visual-1](./DisplayIcons/visual-1.png)
+
+![visual-2](./DisplayIcons/visual-2.png)
+
 
 ## Credits
 
